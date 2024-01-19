@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8438650a16f748de9b0d684d4f27a262" Name="Diagram1" ZoomLevel="73">
+        <EntityTypeShape EntityType="StorageModel.Genders" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StorageModel.Post" Width="1.5" PointX="0.75" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StorageModel.Products" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="StorageModel.Sales" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StorageModel.Sizes" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StorageModel.Storages" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StorageModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StorageModel.test_tb" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StorageModel.Types" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="StorageModel.Workers" Width="1.5" PointX="3" PointY="13.75" IsExpanded="true" />
+        <AssociationConnector Association="StorageModel.FK_Products_Genders" ManuallyRouted="false" />
+        <AssociationConnector Association="StorageModel.FK_Workers_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="StorageModel.FK_Products_Sizes" ManuallyRouted="false" />
+        <AssociationConnector Association="StorageModel.FK_Products_Storages" ManuallyRouted="false" />
+        <AssociationConnector Association="StorageModel.FK_Products_Types" ManuallyRouted="false" />
+        <AssociationConnector Association="StorageModel.FK_Sales_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="StorageModel.FK_Sales_Workers" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

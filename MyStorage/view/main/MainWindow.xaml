@@ -1,0 +1,115 @@
+﻿<Window x:Class="MyStorage.view.main.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyStorage.view.main"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        mc:Ignorable="d"
+        
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource {x:Static SystemColors.InactiveCaptionBrushKey}}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Учет товаров" Height="450" Width="800" WindowStartupLocation="CenterScreen" MinWidth="800" MinHeight="450">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FF2C3E50" Offset="0.576"/>
+                <GradientStop Color="#FF34D7EB" Offset="0"/>
+                <GradientStop Color="#FF3498DB" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="205*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*" MaxWidth="72"/>
+            <ColumnDefinition Width="91*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Width="72" HorizontalAlignment="Center" Grid.Column="0" Grid.RowSpan="2">
+            <materialDesign:Card>
+                <TabControl
+                    materialDesign:NavigationRailAssist.ShowSelectionBackground="True"
+                    SnapsToDevicePixels="True"
+                    Style="{StaticResource MaterialDesignNavigationRailTabControl}"
+                    TabStripPlacement="Left">
+
+                    <TabItem x:Name="Tab_item_3"  Selector.Selected="Tab_item_3_Selected">
+                        <TabItem.Header>
+                            <StackPanel
+                              Width="auto"
+                              Height="auto">
+                                <materialDesign:PackIcon
+                                    Width="24"
+                                    Height="24"
+                                    HorizontalAlignment="Center"
+                                    Kind="AccountDetails" />
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    Text="Кабинет" FontSize="12"/>
+                            </StackPanel>
+                        </TabItem.Header>
+
+                    </TabItem>
+                    
+                    <TabItem x:Name="Tab_item_1" Selector.Selected="Tab_item_1_Selected">
+                        <TabItem.Header>
+                            <StackPanel
+                                  Width="auto"
+                                  Height="auto">
+                                <materialDesign:PackIcon
+                                    Width="24"
+                                    Height="24"
+                                    HorizontalAlignment="Center"
+                                    Kind="Archive" Foreground="#FF2C3E50" />
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    Text="Склад" FontSize="12" Foreground="#FF2C3E50"/>
+                            </StackPanel>
+                        </TabItem.Header>
+
+                    </TabItem>
+                    <TabItem x:Name="Tab_item_2" Selector.Selected="Tab_item_2_Selected">
+                        <TabItem.Header>
+                            <StackPanel
+                              Width="auto"
+                              Height="auto">
+                                <materialDesign:PackIcon
+                                    Width="24"
+                                    Height="24"
+                                    HorizontalAlignment="Center"
+                                    Kind="Basket" Foreground="#FF2C3E50" />
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    Text="Продажи" FontSize="12" Foreground="#FF2C3E50" />
+                            </StackPanel>
+                        </TabItem.Header>
+
+                    </TabItem>
+
+                    
+                </TabControl>
+            </materialDesign:Card>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="0" Background="#FFFAFAFA">
+             
+            <TextBlock x:Name="User_name" HorizontalAlignment="Right" Margin="364,0,50,0" Text="name" VerticalAlignment="Center"/>
+            <materialDesign:PackIcon Kind="AccountCircleOutline" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,25,0" />
+        </Grid>
+
+        <Grid Background="Transparent" Margin="5,5,5,5" Grid.Column="1" Grid.Row="1">
+            <Border BorderBrush="#FF000000" BorderThickness="1" CornerRadius="10" Background="White">
+                <Grid x:Name="Content" >
+
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
